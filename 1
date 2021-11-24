@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+void garis(){for (int i = 0; i <= 30; i++){
+				 cout<< "=";}}
+				 
+void kosong(){for (int i = 0; i <= 5; i++){
+				 cout<<endl;}}
+
+				 
+int main(){
+	
+	string benar, pilihan, Login, Signin; 
+	char nama,wallet,nomor,input;
+	int a = 20;
+	int b = 1000;
+	int y,n;
+
+				 
+	garis();
+	cout<< endl;
+	cout<< "           BLACK JACK";
+	cout<< endl;
+	garis();
+	
+	cout<< endl;
+	cout<< "      welcome to the game";
+	kosong();
+	cout<< "   	    Login\n	    Signin\n";
+	cin>> pilihan;
+	
+	if (pilihan == "Login")
+	{
+		kosong();
+		cout<<" check my deposit money\n";
+		if (benar == y){
+		cout<<" Your deposit money: $1000";
+		}else (benar == n){
+		goto(deposit);
+
+		}
+		deposit; 
+		cout<<" How much do you bet\n";
+			if (input <= b) {
+			cout<<" Charging succeeded";
+			}else (input > b); {
+			cout<<" Charging failed";
+			cout<<" Your deposit money didn't enough";
+			}	
+	} 
+	
+	else (pilihan = "Signin");
+	{
+		kosong();
+		cout<<" Enter Name :"<< nama<< endl;
+		cout<<" Your deposit money :"<< wallet<< endl;
+	}
+}
