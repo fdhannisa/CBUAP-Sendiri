@@ -2,19 +2,22 @@
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
+#include <conio.h>
 using namespace std;
 
-void garis(){for (int i = 0; i <= 30; i++){
+void garis(){for (int i = 0; i <= 50; i++){
 				 cout<< "=";}}
 
-void baris(){for (int i = 0; i <= 20; i++){
+void baris(){for (int i = 0; i <= 40; i++){
 				 cout<< "-";}}
 				 
 void kosong(){for (int i = 0; i <= 5; i++){
 				 cout<<endl;}}
+
+voit t(){ cout<< "\t\t\t\t\t";}
 				 				 
 int main(){
-	string pilihan, input, deposit, signin, pass, daftar;
+	string pilihan, input, deposit, signin, pass, daftar, Player_1, Player_2;
 	string Login = "Mawar";
 	string signup = "Sign Up"
 	string tidak = "no";
@@ -23,49 +26,56 @@ int main(){
 	int y, bet, money;
 
 				 
-	garis();
+	t();garis();
 	cout<< endl;
-	cout<< "           BLACK JACK";
+	t(); cout<< "           BLACK JACK";
 	cout<< endl;
-	garis();
+	t(); garis();
 	system("pause");
 	system("cls");
 
 	cout<< endl;
-	cout<< "      WELCOME TO THE GAME";
+	t(); cout<< "      WELCOME TO THE GAME";
 	kosong();
-	cout<< "   	    Log In\n	    Sign Up\n";
-	cin.ignore(1,'\n');
-	getline(cin, pilihan);
+	t(); cout<< "\tLog In\n"
+	t(); cout<< "\tSign Up\n";
+	kosong();
+	system("pause");
+	system("cls");
+	t(); cin>> pilihan;
 
 	if (pilihan == Login){
-	cout<< "Check my deposit money";
+	t(): cout<< "Check my deposit money";
 	cin>> deposit;
 		if(deposit == tidak){
-		cout<< "How much money would you like to bet? $";
-		cin>> bet;
-		cout<< "Remining deposit: $"<< 1000 - bet<< endl;
+		t(): cout<< "How much money would you like to bet? $";
+		     cin>> bet;
+		t(): cout<< "Remining deposit: $"<< 1000 - bet<< endl;
 		}else {
-		cout<< "Your remaining deposit money is $1000\n";
-		cout<< "How much money would you like to bet? $";
-		cin>> bet;
-		kosong();
-		cout<< "Play;
+		t(): cout<< "Your remaining deposit money is $1000\n";
 		getch();
-		cout<< "| Player 1 :"<< Login;
+		t(): cout<< "How much money would you like to bet? $";
+		cin>> bet;
 		}
+		system("pause");
+		system("cls");
+		kosong();
+		t(); cout<< "PLAY";
+		getch();
+		system("cls");
+		cout<< "Player 1 :"<< Login;
 //P4		
 	}else
-	cout<< "Enter name :";
+	t(): cout<< "Enter name :";
 	cin.ignore(1,'\n');
 	getline(cin, daftar);
-	cout<< "Password :";
+	t(): cout<< "Password :";
 	cin>> pass; 
-	cout<< "Deposit money :$";
+	t(): cout<< "Deposit money :$";
 	cin>> money;
-	cout<< "How much money would you like to bet? $";
+	t(): cout<< "How much money would you like to bet? $";
 	cin>> bet;
-	cout<< "Remining deposit: $"<< money - bet<< endl;
+	t(): cout<< "Remining deposit: $"<< money - bet<< endl;
 	cout<< "| Player 1 :"<< daftar<< "\t";
 	}
 		
@@ -75,6 +85,7 @@ int main(){
 	cout<< "\n| Bet      :$"<< bet<< "\t";
 	cout<< "\t| Bet      :$500\n";
 	baris();
+
 	//Player1
 	srand(time(NULL));
 	int g = rand () % 22;
@@ -84,19 +95,26 @@ int main(){
 //P4	int a = rand () % 22;
 	int b = rand () % 22;
 	int c = rand () % 22;
-	//getch();
-	cout<< "\n| Poin     :"<< g<< " "<< h<< " "<< i;
+
+	getch();
+	t(): cout<< "\n| Poin     :"<< g<< " "<< h<< " "<< i;
 	cout<< "\t| Poin     :"<< a<< " "<< b<< " "<< c<< "\n";
 	baris();		
-	cout<< "\n| Total    :"<< g + h + i;
+	t(): cout<< "\n| Total    :"<< g + h + i;
 	cout<< "\t\t| Total    :"<< a + b + c<< "\n";
 	baris();
 	cout<< "\n";
+	system("cls:);
 
-	if(Player1> Player2){
-	cout<< "winner!!";
-	cout<< "You get $"<< bet*2;
-	}
+	Player_1 = g + h + i;
+	Player_2 = a + b + c;
+
+	if(Player_1> Player_2){
+	t(): cout<< "winner!!";
+	t(): cout<< "You get $"<< bet*2;
+	}else{
+	 system("cls");
+	 t(): cout<< "YOU LOSE!!";
 }
 
 	
